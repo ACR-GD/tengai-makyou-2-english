@@ -7,7 +7,7 @@ released in English, until now.
 ## Download
 
 Get **`Tengai Makyou II - Manji Maru (English v0.9).zip`** from the
-[latest release](../../releases/latest). It contains the BPS patch and a
+[v0.9 beta release](https://github.com/ACR-GD/tengai-makyou-2-english/releases/tag/v0.9-beta). It contains the BPS patch and a
 README. The game is not included: patch your own dump of the Japanese ROM.
 
 | | Size | CRC32 | SHA-1 |
