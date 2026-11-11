@@ -1,4 +1,4 @@
-# Far East of Eden II: Manjimaru — English Translation v0.9 (beta)
+# Far East of Eden II: Manjimaru — English Translation v1.0.1
 
 An English translation patch for **Tengai Makyou II: Manji Maru**, Hudson's
 2005 Nintendo DS remake of the 1992 PC Engine CD classic. It was never
