@@ -1,22 +1,42 @@
-# Far East of Eden II: Manjimaru — English Translation v1.0.1
+# Far East of Eden II: Manjimaru — English Translation v1.1.0
 
 An English translation patch for **Tengai Makyou II: Manji Maru**, Hudson's
 2005 Nintendo DS remake of the 1992 PC Engine CD classic. It was never
 released in English, until now.
 
+![The English translation in game: the prologue, a dialogue box and the save screen](docs/screenshot.png)
+
 ## Download
 
-Get **`Tengai Makyou II - Manji Maru (English v0.9).zip`** from the
-[v0.9 beta release](https://github.com/ACR-GD/tengai-makyou-2-english/releases/tag/v0.9-beta). It contains the BPS patch and a
+Get the zip from the
+[v1.1.0 release](https://github.com/ACR-GD/tengai-makyou-2-english/releases/tag/v1.1.0). It contains the BPS patch and a
 README. The game is not included: patch your own dump of the Japanese ROM.
 
 | | Size | CRC32 | SHA-1 |
 |---|---|---|---|
 | Japanese ROM (input) | 134,217,728 | `0DF79A80` | `0717fcc412af42c2b1d7ac9178974e1259fb7c63` |
-| English ROM (output) | 136,533,316 | `6B9354BA` | `5037474264683be52447181e7e7f10b2a228bf14` |
+| English ROM (output) | 136,634,280 | `29B4CA1B` | `f252e5dd42837afaf948fa4eb25ed2b41bf0612c` |
 
 Apply with [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/),
 Flips or MultiPatch.
+
+If you played v0.9: it could corrupt the game's memory after long
+conversations (sudden poison, deaths, revivals, level jumps). v1.0.1 and later
+fix this, but can't repair a save that was already damaged. Patch the original
+Japanese ROM, not an older English ROM.
+
+## What's new in v1.1.0
+
+- No more overlapping text in the act prologues, the boss lines in battle and
+  the save/load screen title.
+- The opening staff cards are translated.
+- Shop gear stats show the right number after At/Df/Sp.
+- Scrolls renamed: Young Grass → Leaf, Lightning Flash → Flash. The scroll
+  grid in menus and battle no longer runs names together.
+- Zipangu is now Jipang.
+- Save slots read "Lv3" instead of "3Lv/".
+
+See [CHANGELOG.md](CHANGELOG.md) for earlier versions.
 
 ## What's translated
 
@@ -26,6 +46,7 @@ Flips or MultiPatch.
 - Field menus, shops, inns and storage
 - Place names on the menus, the province map and the world map
 - Title screen, New/Load menu, save/load screens
+- Opening staff cards, staff roll and all in-game artwork lettering
 - A new variable-width font
 
 ## Tools
@@ -52,7 +73,7 @@ run them on your own dump.
 Check a patched ROM yourself:
 
 ```sh
-python3 tools/bps_apply.py "Japanese.nds" "Tengai Makyou II - Manji Maru (English v0.9).bps" "English.nds"
+python3 tools/bps_apply.py "Japanese.nds" "Tengai Makyou II - Manji Maru (English v1.1.0).bps" "English.nds"
 ```
 
 It stops on a wrong source ROM, and otherwise writes a ROM that matches the
@@ -60,13 +81,14 @@ output CRC32 above.
 
 `docs/VWF.md` describes how the variable-width font works.
 
-## Known issues (beta)
+## Known issues
 
-- The whole game hasn't been played start to finish on the patched ROM yet:
-  later menus and cutscenes are verified against the game data, not on screen.
-- Some stylized artwork (two intro name banners, the "Manto 2" TV ad, a brush
-  drawing, a wanted poster) and the staff roll are still in Japanese.
-- A few small menu boxes use short forms (Gear/Item/Scrl, Manji, Gokur., Nxt).
+- The whole game hasn't been played start to finish on the patched ROM:
+  late-game content is verified against the game data and in an emulator.
+- Staff names are romanized from the kanji; a few readings may be off.
+- A few small menu boxes use short forms (Gear/Item/Scrl, Manji, Gokur., Nxt),
+  and the scroll grid shows short scroll names (Leaf, Zap…).
+- A few name banners in the anime intro are still in Japanese.
 - Tested on melonDS 1.1 and DeSmuME 0.9.12, not yet on real hardware.
 
 Bug reports with screenshots are very welcome: please [open an issue](../../issues).
